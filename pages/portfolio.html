@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Photos | Charles_Carspotting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/photographe.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Menu Latéral -->
+    <nav class="side-nav">
+        <div class="nav-logo">
+            <img src="../img/photographe.png" alt="Charles Carspotting Logo">
+        </div>
+        <div class="nav-links">
+            <a href="../index.html#home"><i class="fas fa-home"></i></a>
+            <a href="../index.html#about"><i class="fas fa-user"></i></a>
+            <a href="../index.html#gallery"><i class="fas fa-camera"></i></a>
+            <a href="../index.html#social-feed"><i class="fas fa-hashtag"></i></a>
+            <a href="../index.html#contact"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/charles_carspotting/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@charles_carspotting"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </nav>
+
+    <!-- Section Portfolio -->
+    <section class="portfolio-page">
+        <!-- En-tête du Portfolio -->
+        <div class="portfolio-header">
+            <h1>Portfolio Photos</h1>
+            <p>Découvrez ma collection complète de photographies automobiles</p>
+        </div>
+
+        <!-- Filtres de Marques -->
+        <div class="brand-filters-container">
+            <button class="nav-arrow prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="brand-filters">
+                <button class="brand-filter" data-filter="all">
+                    <div class="brand-icon">
+                        <img src="../img/all.png" alt="ALL">
+                    </div>
+                    <span class="filter-label">Tout</span>
+                </button>
+
+                <button class="brand-filter" data-filter="ferrari">
+                    <div class="brand-icon">
+                        <img src="../img/brand/ferrari-logo.png" alt="Ferrari">
+                    </div>
+                    <span class="filter-label">Ferrari</span>
+                </button>
+
+                <button class="brand-filter" data-filter="lamborghini">
+                    <div class="brand-icon">
+                        <img src="../img/brand/lamborghini-logo.png" alt="Lamborghini">
+                    </div>
+                    <span class="filter-label">Lamborghini</span>
+                </button>
+
+                <button class="brand-filter" data-filter="mercedes-benz">
+                    <div class="brand-icon">
+                        <img src="../img/brand/mercedes-logo.png" alt="mercedes-benz">
+                    </div>
+                    <span class="filter-label">Mercedes-Benz</span>
+                </button>
+
+                <button class="brand-filter" data-filter="porsche">
+                    <div class="brand-icon">
+                        <img src="../img/brand/porsche-logo.png" alt="Porsche">
+                    </div>
+                    <span class="filter-label">Porsche</span>
+                </button>
+
+                <button class="brand-filter" data-filter="audi">
+                    <div class="brand-icon">
+                        <img src="../img/brand/audi-logo.png" alt="Audi">
+                    </div>
+                    <span class="filter-label">Audi</span>
+                </button>
+
+                <button class="brand-filter" data-filter="bmw">
+                    <div class="brand-icon">
+                        <img src="../img/brand/bmw-logo.png" alt="BMW">
+                    </div>
+                    <span class="filter-label">BMW M</span>
+                </button>
+            </div>
+            <button class="nav-arrow next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Grille de Photos -->
+        <div class="portfolio-grid">
+            <!-- Exemple d'une photo -->
+            <article class="photo-card" data-filter="ferrari">
+                <div class="photo-image">
+                    <img src="assets/img/cars/ferrari-sf90.jpg" alt="Ferrari SF90">
+                    <div class="photo-overlay">
+                        <div class="photo-meta">
+                            <span class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Monaco
+                            </span>
+                            <span class="date">2024</span>
+                        </div>
+                        <div class="photo-actions">
+                            <button class="action-btn zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="action-btn share">
+                                <i class="fas fa-share"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-info">
+                    <div class="brand-tag">
+                        <img src="img/brand/ferrari-logo.png" alt="Ferrari" class="brand-logo">
+                        <span class="model">SF90 Stradale</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Ajoutez d'autres photos ici avec la même structure -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="portfolio-pagination">
+            <button class="pagination-btn prev-page">
+                <i class="fas fa-chevron-left"></i>
+                Précédent
+            </button>
+            <div class="page-numbers">
+                <span class="page active">1</span>
+                <span class="page">2</span>
+                <span class="page">3</span>
+            </div>
+            <button class="pagination-btn next-page">
+                <i class="fas fa-chevron-right"></i>
+                Suivant
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal pour l'affichage en plein écran -->
+    <div class="photo-modal" id="photoModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption"></div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/portfolio.js"></script>
+</body>
+</html>
